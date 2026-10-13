@@ -1,0 +1,18 @@
+PHASE 1 — TECHNICAL FIELD NOTES REDESIGN
+
+Upload the CONTENTS of this ZIP to the ROOT of your GitHub repository.
+Allow GitHub to replace matching files.
+
+This first pass redesigns:
+- global CSS
+- homepage
+- About
+- Career Brief
+- Contact
+- Faye
+- root Faye duplicate (redirect)
+- sitemap
+- robots
+
+It deliberately reuses your existing assets/images folder. Do not delete that folder.
+The ECHO and older case-study pages remain intact for the next redesign pass.
