@@ -1,18 +1,30 @@
-PHASE 1 — TECHNICAL FIELD NOTES REDESIGN
+FINAL REFINEMENT PASS
 
-Upload the CONTENTS of this ZIP to the ROOT of your GitHub repository.
+Upload the CONTENTS of this ZIP to the ROOT of:
+jrcummins84-sudo/jrcummins84-sudo.github.io
+
 Allow GitHub to replace matching files.
 
-This first pass redesigns:
-- global CSS
-- homepage
-- About
-- Career Brief
-- Contact
-- Faye
-- root Faye duplicate (redirect)
-- sitemap
-- robots
+This package updates:
+- assets/style.css
+- index.html
+- about.html
+- career-brief.html
+- contact.html
+- 404.html
+- faye.html redirect
+- sitemap.xml
+- robots.txt
+- all work/*.html pages
+- four optimized Faye WebP screenshots
 
-It deliberately reuses your existing assets/images folder. Do not delete that folder.
-The ECHO and older case-study pages remain intact for the next redesign pass.
+It does not delete any existing image files. Old JPG versions can remain safely, but the Faye page now uses the WebP copies.
+
+Final refinements include:
+- keyboard focus states and reduced-motion support
+- back-to-work navigation on case studies
+- Open Graph / social sharing metadata
+- optimized Faye screenshots
+- full sitemap coverage
+- stronger documentary copy for Simplify, Metro Tech and Instructional Technology
+- consistent footers / navigation
