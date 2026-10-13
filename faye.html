@@ -1,16 +1,94 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Faye — Personal AI Operating System | Josh Cummins</title><meta content="Case study: Faye, a personal AI operating system combining context, memory, reasoning, governed action, Android product design and release discipline." name="description"/><link href="../assets/style.css" rel="stylesheet"/><meta content="Josh Cummins" name="author"/><meta content="index,follow" name="robots"/><meta content="#f3eee4" name="theme-color"/><meta content="website" property="og:type"/><meta content="Josh Cummins Portfolio" property="og:site_name"/><meta content="en_US" property="og:locale"/><meta content="summary_large_image" name="twitter:card"/></head>
-<body><a class="skip-link" href="#main-content">Skip to main content</a><header class="site"><div class="wrap nav"><a aria-label="Josh Cummins home" class="brand" href="../index.html">JOSH <span>CUMMINS</span></a><nav aria-label="Primary"><a href="../index.html#work">Work</a><a href="../about.html">About</a><a href="../career-brief.html">Career Brief</a><a class="nav-cta primary" href="../contact.html">Contact</a></nav></div></header>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Faye — Personal AI Operating System | Josh Cummins</title>
+<meta name="description" content="Case study: Faye, an independently built personal AI operating system focused on context, memory, decision support, governed action, Android product design and release discipline."/>
+<link href="../assets/style.css" rel="stylesheet"/>
+<meta content="Josh Cummins" name="author"/>
+<meta content="index,follow" name="robots"/>
+<meta content="#f3eee4" name="theme-color"/>
+<meta content="website" property="og:type"/>
+<meta content="Josh Cummins Portfolio" property="og:site_name"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="summary_large_image" name="twitter:card"/>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="site"><div class="wrap nav"><a aria-label="Josh Cummins home" class="brand" href="../index.html">JOSH <span>CUMMINS</span></a><nav aria-label="Primary"><a href="../index.html#work">Work</a><a href="../about.html">About</a><a href="../career-brief.html">Career Brief</a><a class="nav-cta primary" href="../contact.html">Contact</a></nav></div></header>
 <main id="main-content">
-<section class="case-hero"><div class="wrap"><div class="kicker">Independent AI product · Android · systems design</div><h1>Faye</h1><p class="lede">A personal AI operating system designed to understand context, surface what matters, preserve evidence and boundaries, and reduce the administrative work around everyday decisions.</p><div class="case-meta"><span>Role: Product owner / AI systems designer / AI-assisted application developer</span><span>Platform: Android · Kotlin · Jetpack Compose</span><span>Status: Active independent project</span></div><img class="case-image" src="../assets/images/faye-design-board.webp" alt="Faye Black Forest Ledger design exploration showing home, command, structured results, decision state and project actions"/></div></section>
-<section class="section"><div class="wrap"><div class="metrics"><div class="metric"><b>20+</b><span>major product iterations</span></div><div class="metric"><b>60</b><span>backend unit tests in one validation cycle</span></div><div class="metric"><b>12</b><span>HTTP integration tests</span></div><div class="metric"><b>25</b><span>calendar-policy regression checks</span></div></div><p class="small">Representative Faye 20.1 validation evidence. Faye is an independent evolving product, not a commercial release.</p></div></section>
-<section class="section"><div class="wrap prose"><h2>The product premise</h2><p>Faye began with a practical question: what if an AI assistant managed more of the system around a decision instead of waiting for another prompt?</p><p>The goal is not “more chat.” It is less administrative work. Faye combines personal context, memory, planning, monitoring, source reconciliation, decision support and controlled actions in one operating layer.</p><div class="callout"><b>Warm assistant on the surface. Serious operating system underneath.</b><span>The interface should explain what matters now, what changed, what decision remains and what evidence supports it.</span></div></div></section>
-<section class="section dark"><div class="wrap"><div class="section-title"><h2>From chatbot to operating system</h2><p>The architecture separates the learner-facing experience from the machinery required to make autonomous or semi-autonomous behavior trustworthy.</p></div><div class="work-grid"><div class="cap"><b>Context</b><p>Calendar, communications, projects, phone state, personal knowledge and connected services.</p></div><div class="cap"><b>Memory</b><p>Persistent state, project history, saved context, standing rules and corrected assumptions.</p></div><div class="cap"><b>Reasoning</b><p>Attention, temporal intelligence, source comparison, prioritization and recommendation logic.</p></div><div class="cap"><b>Governed actions</b><p>Planning, approval, trust policy, execution and verification are treated as explicit product boundaries.</p></div><div class="cap"><b>Interface</b><p>Home, Areas, Projects, Activity and a persistent command model expose conclusions without exposing internal machinery.</p></div><div class="cap"><b>Evidence</b><p>Freshness, provenance, confidence and source state matter whenever Faye makes a consequential recommendation.</p></div></div></div></section>
-<section class="section"><div class="wrap"><div class="section-title"><h2>Designing for clarity</h2><p>The final visual direction—Black Forest Ledger—grew out of repeated concept exploration and usability audits. The design law became: conclusion first, decision second, evidence third, machinery almost never.</p></div><div class="evidence"><figure><img src="../assets/images/faye-command-dock.webp" alt="Faye command dock design exploration"><figcaption>Command becomes persistent and compact when idle, expanding only when the user needs deeper interaction.</figcaption></figure><figure><img src="../assets/images/faye-structured-result.webp" alt="Faye structured result design exploration"><figcaption>Structured results turn raw assistant output into decisions, actions, evidence and clear next steps.</figcaption></figure></div><figure class="case-image"><img src="../assets/images/faye-decision-state.webp" alt="Faye decision state design exploration"><figcaption class="small">Decision-state exploration: recommendation, context, confidence and explicit user control. These images are design explorations; mock data shown in them is illustrative rather than production state.</figcaption></figure></div></section>
-<section class="section dark"><div class="wrap prose"><h2>Product architecture that respects boundaries</h2><p>The redesign intentionally preserved the safety and compatibility contracts beneath the UI. Planning, trust, approval, execution, verification and provenance remain separate concerns instead of collapsing into one opaque “agent” step.</p><p>Primary navigation evolved from an engineering-era Home / Ask / Activity / Calendar shell into a product model centered on <strong>Home · Areas · Projects · Activity</strong>, with command available globally and calendar available contextually.</p><p>That change reflects a broader product principle: users should navigate by the work they are trying to understand, not by the internal subsystem doing the work.</p></div></section>
-<section class="section"><div class="wrap prose"><h2>State freshness and failure safety</h2><p>Several Faye releases focused less on visual features and more on semantic correctness: stale targets, ambiguous commands, old recommendation IDs, duplicated calendar behavior and misleading system-health states.</p><p>Physical-device acceptance tests were designed around specific failure cases—for example, ensuring that an ambiguous phrase such as “ignore this” cannot act on a stale recommendation after restart, that command history does not expose raw internal IDs, and that calendar responses do not claim success when nothing was created.</p><div class="callout"><b>Fail closed when intent is ambiguous.</b><span>Automation is useful only when the system can explain what it is acting on and refuse unsafe assumptions.</span></div></div></section>
-<section class="section"><div class="wrap"><div class="section-title"><h2>Release discipline</h2><p>Faye became a practical laboratory for treating AI-assisted development as product engineering rather than prototype generation.</p></div><div class="cap-grid"><div class="cap"><b>Source audits</b><p>Architecture and logic are audited before visual changes are allowed to redefine behavior.</p></div><div class="cap"><b>Regression testing</b><p>Policy checks protect behaviors that previously failed, especially around calendar actions and stale context.</p></div><div class="cap"><b>Integration tests</b><p>Backend HTTP and service contracts are validated separately from the Android presentation layer.</p></div><div class="cap"><b>Device acceptance</b><p>Builds are installed over prior versions without clearing data to test migration and state continuity.</p></div><div class="cap"><b>Release gates</b><p>A build is not considered ready simply because it compiles or looks correct.</p></div><div class="cap"><b>Correction as training</b><p>User corrections become product signals for rules, semantics and future behavior.</p></div></div></div></section>
-<section class="section dark"><div class="wrap prose"><h2>What I own</h2><p><strong>Product vision · UX direction · requirements · roadmap · architecture decisions · AI-assisted Kotlin / Compose development · API/action contracts · QA strategy · release criteria · device acceptance · continuous redesign.</strong></p><p>Faye is my first major software-building project. That makes the project valuable not because I claim to be a career Android engineer, but because it demonstrates how I approach an unfamiliar, complex system: model it, test it, learn it, challenge it, and keep refining until the system becomes understandable and useful.</p></div></section>
-<section class="section"><div class="wrap prose"><h2>What this demonstrates</h2><p><strong>AI product strategy · systems architecture · UX / information architecture · Android product development · governed automation · QA / release management · source-grounded reasoning · continuous learning.</strong></p><p>The same pattern appears throughout my career: learn how the complicated thing works, then figure out how to explain it, improve it or represent it.</p><p class="public-note">Portfolio note: Faye is an independent personal project. Design-board imagery is labeled as exploration and includes illustrative mock data. Internal implementation details are summarized at a level appropriate for a public portfolio.</p></div></section>
-<section class="cta-band"><div class="wrap"><div><h2>See how the pieces connect.</h2><p>Faye extends the same systems-thinking approach visible in my learning-technology work into AI product design and software development.</p></div><div><a class="button fill" href="../index.html#work">All work</a><a class="button" href="../career-brief.html">Career brief</a></div></div></section>
-</main><footer><div class="wrap footer-grid"><span>Josh Cummins · Cary, Illinois</span><span><a href="../index.html#work">Work</a> · <a href="../career-brief.html">Career Brief</a> · <a href="../contact.html">Contact</a></span><span>© <span data-year=""></span></span></div></footer><script src="../assets/site.js"></script></body></html>
+<section class="case-hero"><div class="wrap">
+<div class="kicker">Independent product project</div>
+<h1>Faye</h1>
+<p class="lede">A personal AI operating system designed to reduce administrative work by connecting context, memory, reasoning, governed actions and a calm interface.</p>
+<div class="case-meta"><span>Role: Product owner / AI systems designer / AI-assisted application developer</span><span>Platform: Android · Kotlin · Jetpack Compose</span><span>Status: Evolving personal project</span></div>
+</div></section>
+
+<section class="section"><div class="wrap prose">
+<h2>The product premise</h2>
+<p>Faye began with a practical question: what if an AI assistant managed more of the system around a decision instead of waiting for another prompt?</p>
+<p>The project treats AI as an operating layer across planning, memory, projects, communications, personal context, finances, household administration and decision support. The goal is not more chat. The goal is less clerical work and clearer decisions.</p>
+</div></section>
+
+<section class="section dark"><div class="wrap prose">
+<h2>A system, not a chatbot</h2>
+<p>The product is designed around five connected layers: <strong>context → memory → reasoning → governed actions → interface</strong>. State, evidence, action boundaries and verification are treated as product requirements rather than hidden implementation details.</p>
+<div class="callout"><b>Conclusion first. Decision second. Evidence third. Machinery almost never.</b><span>Faye is designed to keep complexity in the system and clarity in the interface.</span></div>
+</div></section>
+
+<section class="section"><div class="wrap prose">
+<h2>Design evolution</h2>
+<p>The visual direction was developed through repeated concept rounds and usability audits before converging on a dark, editorial interface with conventional navigation, restrained signal color and clear state communication. The public case study now emphasizes the functioning product rather than concept-board imagery.</p>
+</div></section>
+
+<section class="section"><div class="wrap">
+<div class="section-title"><h2>Live mobile product screens</h2><p>These captured screens show Faye as a functioning Android product with working navigation, domain surfaces, status messaging, settings and recovery-oriented controls.</p></div>
+<div class="evidence">
+<figure><img src="../assets/images/faye-mobile-home.jpg" alt="Faye Android home screen showing greeting, system status, attention summary, and command dock"/><figcaption><strong>Home</strong> — briefing surface with greeting, status, attention state and command access.</figcaption></figure>
+<figure><img src="../assets/images/faye-mobile-areas.jpg" alt="Faye Android areas screen showing Work, Family, Money, and Personal domains"/><figcaption><strong>Areas</strong> — work, family, money and personal context organized as deeper domains.</figcaption></figure>
+<figure><img src="../assets/images/faye-mobile-today.jpg" alt="Faye Android today view showing scheduled timeline items and prompt dock"/><figcaption><strong>Today</strong> — time-aware schedule and action framing rather than a generic chat thread.</figcaption></figure>
+<figure><img src="../assets/images/faye-mobile-settings.jpg" alt="Faye settings screen showing Google connection, Calendar, Saved context, Command history, and Source status and repair"/><figcaption><strong>Settings & recovery</strong> — connections, saved-context visibility, command history and source-repair controls.</figcaption></figure>
+</div>
+<p class="public-note">Device screenshots document the current Android product state. Screen content is environment-specific and presented as product evidence rather than a production promise.</p>
+</div></section>
+
+<section class="section"><div class="wrap prose">
+<h2>From engineering shell to product</h2>
+<p>Version 20.1 replaced an older HOME / ASK / ACTIVITY / CALENDAR shell with a broader product model organized around <strong>Home, Areas, Projects and Activity</strong>, while keeping calendar and system-maintenance capability available contextually.</p>
+<p>The redesign also moved Ask out of primary navigation and introduced a persistent global command dock: compact while idle, richer when needed.</p>
+</div></section>
+
+<section class="section dark"><div class="wrap prose">
+<h2>Governed autonomy</h2>
+<p>Faye is intentionally designed so convenience does not erase control. Planning, approvals, action execution, trust policy, provenance and verification remain separate concerns. The product distinguishes a recommendation from an action, an action from execution, and execution from verified completion.</p>
+<h3>Safety principles</h3>
+<p>Ambiguous commands fail closed. Stale targets are not allowed to silently become active again. Reversible actions are preferred. Source problems should surface their impact without inventing state.</p>
+</div></section>
+
+<section class="section"><div class="wrap">
+<div class="metrics">
+<div class="metric"><b>25</b><span>calendar-policy regression checks</span></div>
+<div class="metric"><b>60</b><span>backend Python tests</span></div>
+<div class="metric"><b>12</b><span>HTTP integration tests</span></div>
+<div class="metric"><b>20.1</b><span>major redesign lineage</span></div>
+</div>
+<p class="small">One documented 20.1 validation cycle; shown as project evidence rather than permanent product totals.</p>
+</div></section>
+
+<section class="section"><div class="wrap prose">
+<h2>Release discipline</h2>
+<p>Faye became a practical laboratory for product ownership and software quality. The project uses source audits, regression checks, backend unit/integration tests, build gates, explicit release criteria and physical-device acceptance rather than treating a compiling prototype as “done.”</p>
+<p>Physical-device checklists cover upgrade/migration behavior, stale-target safety, command-history privacy, semantic regressions, navigation, Android compatibility and on-device ML behavior.</p>
+</div></section>
+
+<section class="section dark"><div class="wrap prose">
+<h2>What this demonstrates</h2>
+<p><strong>Product strategy · AI systems thinking · Android product architecture · UX / information architecture · governed automation · QA · release management · iterative design.</strong></p>
+<p>Faye is my first major application-building project, but it follows the same through-line as my learning-technology work: understand the complicated system, model it clearly, then make it easier and safer to use.</p>
+</div></section>
+<section class="cta-band"><div class="wrap"><div><h2>See how the pieces connect.</h2><p>Explore the broader portfolio or use the career brief for a concise view of experience and role fit.</p></div><div><a class="button fill" href="../index.html#work">All work</a><a class="button" href="../career-brief.html">Career brief</a></div></div></section>
+</main>
+<footer><div class="wrap footer-grid"><span>Josh Cummins · Cary, Illinois</span><span><a href="../index.html#work">Work</a> · <a href="../career-brief.html">Career Brief</a> · <a href="../contact.html">Contact</a></span><span>© <span data-year=""></span></span></div></footer>
+<script src="../assets/site.js"></script>
+</body></html>
